@@ -564,7 +564,7 @@ TIER_EMOJIS = {
 # SIDEBAR - Logo and branding
 st.sidebar.image(
     "https://clearpath.org/wp-content/uploads/sites/44/2018/04/clearpath-logo-vpad-300x300.png",
-    use_container_width=True
+    use_column_width=True
 )
 st.sidebar.markdown("### Critical Minerals Tracker")
 st.sidebar.caption("Policy Intelligence Dashboard")
