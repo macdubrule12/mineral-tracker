@@ -1,9 +1,10 @@
 name: Weekly Minerals Email
 
 on:
-  # Run every Friday at 8:00 AM ET (13:00 UTC)
+  # Run every Monday and Friday at 8:00 AM ET (13:00 UTC)
   schedule:
-    - cron: '0 13 * * 5'
+    - cron: '0 13 * * 1'  # Monday
+    - cron: '0 13 * * 5'  # Friday
 
   # Allow manual trigger for testing
   workflow_dispatch:

@@ -63,7 +63,7 @@ def create_email_html(high_stories, medium_stories):
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #193D69; margin: 0; padding: 0; background-color: #f5f5f5; }}
-            .container {{ max-width: 600px; margin: 0 auto; background-color: #ffffff; }}
+            .container {{ max-width: 800px; margin: 0 auto; background-color: #ffffff; }}
             .header {{ background: linear-gradient(135deg, #193D69 0%, #2E5A8C 100%); color: white; padding: 30px 20px; text-align: center; }}
             .header h1 {{ margin: 0; font-size: 24px; }}
             .header p {{ margin: 10px 0 0 0; opacity: 0.9; font-size: 14px; }}
