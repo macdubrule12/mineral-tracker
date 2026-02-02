@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-02-02T17:30:00.000000",
+  "count": 3,
+  "items": [
+    {
+      "title": "Senate Passes Critical Minerals Security Act with Bipartisan Support",
+      "source": "Reuters",
+      "link": "https://example.com/senate-minerals-act",
+      "date": "2026-02-01",
+      "summary": "The U.S. Senate voted 78-22 to pass legislation aimed at securing domestic supply chains for critical minerals including lithium, cobalt, and rare earth elements...",
+      "why_it_matters": "Major legislative momentum for domestic mining | Includes $2.5B in federal funding for permitting reform | Could accelerate project timelines by 3-5 years",
+      "clearpath_angle": "STRATEGIC VALUE: Aligns with ClearPath advocacy for energy infrastructure permitting reform | CONSIDER: Draft memo on how minerals permitting fits into broader energy project acceleration efforts",
+      "regions": "US",
+      "minerals": "Lithium, Cobalt, Rare Earth"
+    },
+    {
+      "title": "China Announces Export Quotas on Graphite, Rare Earths",
+      "source": "Bloomberg",
+      "link": "https://example.com/china-export-quotas",
+      "date": "2026-01-31",
+      "summary": "China's Ministry of Commerce unveiled new quarterly export quotas on battery-grade graphite and rare earth minerals, tightening global supply constraints...",
+      "why_it_matters": "Further evidence of China's strategic resource control | Could accelerate US/allied efforts to develop alternative supply chains | Battery costs may increase 5-8% near-term",
+      "clearpath_angle": "STRATEGIC VALUE: Strengthens case for domestic production and allied partnerships | CONSIDER: Update policy team on implications for EV supply chain security and potential administration responses",
+      "regions": "China, US",
+      "minerals": "Graphite, Rare Earth"
+    },
+    {
+      "title": "First Lithium Mine in Nevada Receives Final Permit Approval",
+      "source": "Mining.com",
+      "link": "https://example.com/nevada-lithium-permit",
+      "date": "2026-01-29",
+      "summary": "The Bureau of Land Management granted final approval for the Thunder Basin Lithium Project in Nevada, marking the first new lithium mine permitted in the U.S. in over a decade...",
+      "why_it_matters": "Proof-of-concept for permitting reform success | Project could supply 30% of domestic lithium demand by 2028 | Demonstrates feasibility of expedited environmental review",
+      "clearpath_angle": "STRATEGIC VALUE: Excellent case study for permitting reform advocacy | CONSIDER: Interview project developers for testimony/white paper on what worked in their permitting process",
+      "regions": "US",
+      "minerals": "Lithium"
+    }
+  ]
+}
