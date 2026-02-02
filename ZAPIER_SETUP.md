@@ -22,11 +22,13 @@ Send High Priority minerals news to mining@clearpath.org every **Monday and Frid
 ### 3. Add Action - Fetch Data
 **Action: Webhooks by Zapier**
 - Event: **"GET"**
-- URL: `https://clearpath-minerals.streamlit.app/?format=json`
+- URL: `https://raw.githubusercontent.com/macdubrule/mineral-tracker/main/priorities.json`
 - Leave other fields blank
 - Test action ✓
 
 You'll see JSON data with High Priority stories!
+
+**Note:** This JSON file updates automatically every day at 6am ET via GitHub Actions.
 
 ### 4. Add Action - Send Email
 **Action: Gmail**
@@ -41,27 +43,27 @@ Hi team,
 
 Here are this week's High Priority critical minerals updates:
 
-{{1. Data__title}}
-Source: {{1. Data__source}}
-Why it matters: {{1. Data__why_it_matters}}
-ClearPath Angle: {{1. Data__clearpath_angle}}
-Link: {{1. Data__link}}
+1. {{1. Items__title}}
+Source: {{1. Items__source}} | Date: {{1. Items__date}}
+Why it matters: {{1. Items__why_it_matters}}
+ClearPath Angle: {{1. Items__clearpath_angle}}
+Read more: {{1. Items__link}}
 
 ---
 
-{{2. Data__title}}
-Source: {{2. Data__source}}
-Why it matters: {{2. Data__why_it_matters}}
-ClearPath Angle: {{2. Data__clearpath_angle}}
-Link: {{2. Data__link}}
+2. {{2. Items__title}}
+Source: {{2. Items__source}} | Date: {{2. Items__date}}
+Why it matters: {{2. Items__why_it_matters}}
+ClearPath Angle: {{2. Items__clearpath_angle}}
+Read more: {{2. Items__link}}
 
 ---
 
-{{3. Data__title}}
-Source: {{3. Data__source}}
-Why it matters: {{3. Data__why_it_matters}}
-ClearPath Angle: {{3. Data__clearpath_angle}}
-Link: {{3. Data__link}}
+3. {{3. Items__title}}
+Source: {{3. Items__source}} | Date: {{3. Items__date}}
+Why it matters: {{3. Items__why_it_matters}}
+ClearPath Angle: {{3. Items__clearpath_angle}}
+Read more: {{3. Items__link}}
 
 ---
 
@@ -70,6 +72,8 @@ View full dashboard: https://clearpath-minerals.streamlit.app/
 Best,
 ClearPath Minerals Tracker
 ```
+
+**Pro tip:** In Zapier, after you test the webhook, you'll see all the fields. Just click to insert them into your email template.
 
 - Test action ✓
 - **Turn Zap ON**
@@ -103,16 +107,30 @@ If you want prettier emails, use **"Gmail > Send Email (with Rich Text)"** and f
 <p>Here are this week's High Priority critical minerals updates:</p>
 
 <div style="border-left: 4px solid #FFC107; padding-left: 12px; margin: 16px 0;">
-  <h3>{{1. Data__title}}</h3>
-  <p><strong>Source:</strong> {{1. Data__source}}</p>
-  <p><strong>Why it matters:</strong> {{1. Data__why_it_matters}}</p>
-  <p><strong>ClearPath Angle:</strong> {{1. Data__clearpath_angle}}</p>
-  <p><a href="{{1. Data__link}}">Read more →</a></p>
+  <h3>{{1. Items__title}}</h3>
+  <p><strong>Source:</strong> {{1. Items__source}} | <strong>Date:</strong> {{1. Items__date}}</p>
+  <p><strong>Why it matters:</strong> {{1. Items__why_it_matters}}</p>
+  <p><strong>ClearPath Angle:</strong> {{1. Items__clearpath_angle}}</p>
+  <p><a href="{{1. Items__link}}" style="color: #9D1C20;">Read more →</a></p>
 </div>
 
-<!-- Repeat for items 2 and 3 -->
+<div style="border-left: 4px solid #FFC107; padding-left: 12px; margin: 16px 0;">
+  <h3>{{2. Items__title}}</h3>
+  <p><strong>Source:</strong> {{2. Items__source}} | <strong>Date:</strong> {{2. Items__date}}</p>
+  <p><strong>Why it matters:</strong> {{2. Items__why_it_matters}}</p>
+  <p><strong>ClearPath Angle:</strong> {{2. Items__clearpath_angle}}</p>
+  <p><a href="{{2. Items__link}}" style="color: #9D1C20;">Read more →</a></p>
+</div>
 
-<p><a href="https://clearpath-minerals.streamlit.app/">View full dashboard →</a></p>
+<div style="border-left: 4px solid #FFC107; padding-left: 12px; margin: 16px 0;">
+  <h3>{{3. Items__title}}</h3>
+  <p><strong>Source:</strong> {{3. Items__source}} | <strong>Date:</strong> {{3. Items__date}}</p>
+  <p><strong>Why it matters:</strong> {{3. Items__why_it_matters}}</p>
+  <p><strong>ClearPath Angle:</strong> {{3. Items__clearpath_angle}}</p>
+  <p><a href="{{3. Items__link}}" style="color: #9D1C20;">Read more →</a></p>
+</div>
+
+<p><a href="https://clearpath-minerals.streamlit.app/" style="color: #9D1C20;">View full dashboard →</a></p>
 ```
 
 ---
