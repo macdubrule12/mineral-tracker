@@ -553,6 +553,39 @@ def sanitize_html(text):
 
 news_items = load_news()
 
+# JSON API endpoint for Zapier integration
+# Access via: https://clearpath-minerals.streamlit.app/?format=json
+try:
+    query_params = st.query_params
+    if query_params.get("format") == "json":
+        import json
+        from datetime import datetime, timedelta
+
+        # Filter for High Priority items from last 7 days
+        week_ago = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+
+        high_priority = [
+            {
+                "title": item.get("title", ""),
+                "source": item.get("source", ""),
+                "link": item.get("link", ""),
+                "date": item.get("date", ""),
+                "summary": item.get("summary", ""),
+                "why_it_matters": item.get("why_it_matters", ""),
+                "clearpath_angle": item.get("clearpath_angle", ""),
+                "regions": item.get("regions", []),
+                "minerals": item.get("minerals", [])
+            }
+            for item in news_items
+            if item.get("relevance_level") == "High" and item.get("date", "") >= week_ago
+        ]
+
+        # Output JSON and stop
+        st.write(json.dumps(high_priority, indent=2))
+        st.stop()
+except:
+    pass  # If query params fail, just continue with normal dashboard
+
 # Tier emoji mapping
 TIER_EMOJIS = {
     "Gov": "🏛️",
